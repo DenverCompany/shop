@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denver Company - Tienda Online</title>
+    <title>Carrito - Denver Company</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,10 +20,15 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Bienvenido a Denver Company</h1>
-            <p>Descubre nuestra última colección de moda.</p>
-            <a href="products.html" class="cta-button">Ver Productos</a>
+        <section class="cart">
+            <h2>Tu Carrito</h2>
+            <div class="cart-items">
+                <!-- Productos del carrito generados dinámicamente por JavaScript -->
+            </div>
+            <div class="cart-summary">
+                <p>Total: $<span id="cart-total">0</span></p>
+                <a href="checkout.html" class="cta-button">Proceder al Pago</a>
+            </div>
         </section>
     </main>
 

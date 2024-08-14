@@ -1,4 +1,6 @@
 /* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,126 +8,274 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #333;
-    background-color: #fff;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Contenedor */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* Estilo del header */
 header {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
+    background-color: #fff;
+    color: #111;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
+    letter-spacing: 2px;
+    color: #111;
+    text-transform: uppercase;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #111;
     text-decoration: none;
+    font-size: 16px;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ccc;
+    color: #555;
 }
 
-/* Sección Hero */
+/* Hero Section */
 .hero {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #000;
+    background: linear-gradient(to right, #000, #333), url('images/hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    margin-top: 80px;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 56px;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 40px;
 }
 
-/* Sección de productos */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #111;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Productos */
 .products {
-    padding: 50px 20px;
-    background-color: #f8f8f8;
+    padding: 100px 20px;
+    background-color: #fff;
 }
 
 .products h2 {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
+    margin-bottom: 60px;
+    font-size: 36px;
+    color: #111;
 }
 
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
+    margin-top: 40px;
 }
 
 .product-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    width: calc(33.333% - 40px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .product-item img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
 }
 
 .product-item h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    margin: 20px;
+    color: #111;
 }
 
 .product-item p {
     font-size: 18px;
-    margin-bottom: 15px;
+    margin: 0 20px 20px;
 }
 
 .add-to-cart {
-    padding: 10px 20px;
-    background-color: #000;
+    display: block;
+    width: calc(100% - 40px);
+    margin: 0 20px 20px;
+    padding: 10px 0;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Carrito */
+.cart {
+    padding: 100px 20px;
+    background-color: #fff;
+}
+
+.cart h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.cart-items {
+    margin-bottom: 40px;
+}
+
+.cart-summary {
+    text-align: center;
+}
+
+.cart-summary p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cart-summary .cta-button {
+    font-size: 18px;
+}
+
+/* Checkout */
+.checkout {
+    padding: 100px 20px;
+    background-color: #fff;
+}
+
+.checkout form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #f8f8f8;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout form div {
+    margin-bottom: 20px;
+}
+
+.checkout form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #111;
+}
+
+.checkout form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.checkout form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #111;
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.add-to-cart:hover {
-    background-color: #333;
+.checkout form button:hover {
+    background-color: #555;
 }
 
-/* Estilo del footer */
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #000;
+    background-color: #111;
     color: #fff;
+    margin-top: 40px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .product-list {
+        grid-template-columns: 1fr;
+    }
 }

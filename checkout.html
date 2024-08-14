@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denver Company - Tienda Online</title>
+    <title>Pagar - Denver Company</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,10 +20,23 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Bienvenido a Denver Company</h1>
-            <p>Descubre nuestra última colección de moda.</p>
-            <a href="products.html" class="cta-button">Ver Productos</a>
+        <section class="checkout">
+            <h2>Información de Pago</h2>
+            <form id="checkout-form">
+                <div>
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div>
+                    <label for="card">Número de Tarjeta:</label>
+                    <input type="text" id="card" required>
+                </div>
+                <button type="submit" class="cta-button">Pagar</button>
+            </form>
         </section>
     </main>
 
